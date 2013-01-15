@@ -8,7 +8,7 @@ var RackTrace = (function() {
       var trace = data.trace[ind];
 
       var timeline = trace.time0 + " - " + trace.time1;
-      timeline += " => " + (trace.time1 - trace.time0).toFixed(2) + "ms";
+      timeline += " => " + ((trace.time1 - trace.time0)*1000).toFixed(2) + "ms";
 
       $("table").append($("<tr>")
         .append('<td>' +  trace.title + '</td>')

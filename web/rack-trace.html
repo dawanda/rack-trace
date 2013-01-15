@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <title>Rack::Trace</title>
+    <link rel="stylesheet" type="text/css" href="/__rack_trace.css" />
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src="/__rack_trace.js"></script>
+  </head>
+  <body>
+    Rack::Trace loading...
+
+    <script type="text/javascript">
+      var trace = {{{JSON}}};
+      RackTrace.render(trace);
+    </script>
+  </body>
+</html>
+

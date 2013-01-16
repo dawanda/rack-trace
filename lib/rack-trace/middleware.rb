@@ -29,6 +29,9 @@ class Rack::Trace::Middleware
       data[:time1] = Time.now.to_f
 
       data[:trace] = Rack::Trace.cache
+      data[:http_status] = res[0]
+      data[:http_url] = "#{env["REQUEST_METHOD"]} #{env["PATH_INFO"]}?#{env["QUERY_STRING"]}"
+      data[:http_headers] = res[1].map{ |k,v| "#{k}: #{v}" }
 
       render(data)
     else
